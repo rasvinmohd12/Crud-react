@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  color: #333;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of viewport */
+  margin: 0; /* Remove default margin */
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Section Styles */
+.section {
+  background: rgba(255, 255, 255, 0.9); /* Transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px; /* Spacing between sections */
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Form Styles */
+input[type='text'] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #e7f3fe; /* Background color */
+  color: #000000; /* Text color */
+  transition: border 0.3s;
+}
+
+input[type='text']:focus {
+  border: 1px solid #553f9a;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #3f869a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Animation on hover */
+}
+
+button:hover {
+  background-color: #432e73;
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Item List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between; /* Align items to the edges */
+  align-items: center;
+  background-color: rgba(249, 249, 249, 0.8); /* Slightly transparent */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+  transition: background-color 0.3s, transform 0.2s; /* Animation */
+}
+
+li:hover {
+  background-color: rgba(234, 234, 234, 0.9); /* Darker on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Button Container */
+.button-container {
+  display: flex; /* Align buttons side by side */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Edit and Delete Button Styles */
+.edit-button,
+.delete-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Animation */
+}
+
+.delete-button {
+  background-color: #f44336; /* Red */
+}
+
+.edit-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
